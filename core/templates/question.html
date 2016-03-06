@@ -1,0 +1,43 @@
+
+{% extends "base.html"%}
+{% load staticfiles %}
+{% load base_tags %}
+{% block content %}
+{% csrf_token %}  
+  <div id="data" data-question-id="{{question.id}}" data-next-if-no="{{question.next_if_no}}" data-next-if-yes="{{question.next_if_yes}}"></div>
+<div class="screen tinderslide" id="questions">
+  <ul>
+    <li class="pane1 pane">
+      <div class="content">
+        <div class="img"  style="background: url({{question.picture.name|media}})  no-repeat scroll center center">
+        </div>
+        <div class="question-content">{{question.content}}</div>
+        <div class="pull-right question-learn-more" data-toggle="modal" data-target="#myModal">Learn More</div>
+
+        <div class="clearfix"></div>
+
+      </div>
+
+    </li>
+    
+
+  </ul>
+
+</div>
+<div class="footer actions">
+  <div data-option="like" class="dislike"></div>
+  <div  data-option="dislike" class="like"></div>
+</div>
+
+{% endblock content %}
+
+{% block content_js %}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+  <script src="{% static 'question.js' %}"></script>
+{% endblock content_js %}
+
+
+{% block content_css %}
+  <link href="{% static 'questions.css' %}" rel="stylesheet">
+  
+{% endblock content_css %}

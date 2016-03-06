@@ -1,0 +1,17 @@
+body{
+    overflow: auto !important;
+}
+.h1-title{
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.language-item {
+    font-weight: bold;
+    font-family: arial;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 40px;
+}

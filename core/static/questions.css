@@ -1,0 +1,30 @@
+body{
+}
+.footer{
+    height: 200px;
+    bottom: 0px;
+}
+
+.actions{
+    height: 150px;
+}
+
+
+.footer{
+    background: transparent;
+}
+
+#questions{
+    /*display: none;*/
+}
+
+.question-learn-more{
+    color: #FFA83F;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+#questions{
+    display: block;
+    cursor: pointer;
+}

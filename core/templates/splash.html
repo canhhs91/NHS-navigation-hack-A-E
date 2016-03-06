@@ -1,0 +1,35 @@
+
+{% extends "base.html"%}
+{% block meta_refresh %}
+  <meta http-equiv="refresh" 
+  content="2;
+  url=/language">
+
+{% endblock meta_refresh %}
+{% block navbar %}
+
+  
+{% endblock navbar %}
+{% load staticfiles %}
+{% block content %}
+<div id="splash_screen">
+  <div class="section" id="section1">
+    <div class="slide step" id="slide1">
+      <h1 class="step-title">NHS<br> A&E <br>Health<br>Pass</h1>
+    </div>
+    
+      
+  </div>
+</div>
+
+
+
+{% endblock content %}
+
+{% block content_js %}
+<script src="{% static 'welcome.js' %}"></script>
+{% endblock content_js %}
+
+{% block content_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'welcome.css' %}">
+{% endblock content_css %}

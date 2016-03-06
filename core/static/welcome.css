@@ -1,0 +1,7 @@
+body{
+    background: #0064b7;
+}
+a:focus, a:hover, a {
+    color: white;
+    text-decoration: underline;
+}

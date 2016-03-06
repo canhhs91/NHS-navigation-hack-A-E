@@ -1,0 +1,17 @@
+
+{% extends "base.html"%}
+{% load staticfiles %}
+{% load base_tags %}
+{% block content %}
+  <iframe width="100%" height="400px" src="https://airportr.typeform.com/to/cfeila?id={{session_id}}&gp=xxxxx&callback={{'healthpass'|base_ip}}"></iframe>
+{% endblock content %}
+{% block content_js %}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+  <script src="{% static 'question.js' %}"></script>
+{% endblock content_js %}
+
+
+{% block content_css %}
+  <link href="{% static 'personal.css' %}" rel="stylesheet">
+  
+{% endblock content_css %}

@@ -1,0 +1,80 @@
+body{
+        overflow: auto !important;
+}
+
+.container{
+    margin: 0;
+    padding: 0;
+}
+
+.block{
+    background: #fff;
+    padding: 15px;
+}
+
+.h1-title{
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.h3-description {
+    margin-bottom: 20px;
+}
+
+.col-md-12.healthpass-item {
+    height: 47px;
+}
+
+
+.answer-yes, .answer-no{
+    width: 24px;
+    height: 24px;
+    background-size: 100% 100%;
+    display: block;
+    float: right;
+    top: 0;
+    position: absolute;
+    right: 10px;
+}
+
+.answer-yes{
+    background-image: url(images/answer-yes.png);
+}
+
+.answer-no{
+    background-image: url(images/answer-no.png);
+}
+
+.dangerzone, .safetyzone, .gpzone{
+    margin-bottom: 10px;
+}
+.summary-item{
+    color: #fff;
+    height: 73px;
+    line-height: 73px;
+    font-size: 24px;
+    padding: 0 18px;
+}
+.dangerzone .summary-item {
+    background: #D0021B;
+    
+}
+
+.safetyzone .summary-item{
+    background: #007ADD;
+}
+
+.healthpath-dosomething {
+    text-align: right;
+}
+
+.healthpath-dosomething a {
+    margin-left: 10px;
+}
+
+.block {
+    margin: 5px;
+    box-shadow: 2px 2px 5px #ccc;
+}

@@ -1,0 +1,180 @@
+@font-face {
+    font-family: SFUI;
+    src: url("fonts/SF-UI-Text-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: transportheavy;
+    src: url("fonts/transportheavy/transportheavy.ttf") format("truetype");
+}
+
+
+body{
+    font-family: transportheavy !important;
+    
+    background: #F2F2F2;
+}
+
+.step{
+    transition: all 0.5s ease;
+    width: 100%;
+    padding: 0 24px;
+    /*position: absolute;*/
+    /*left: 0;*/
+}
+
+.step.viewed{
+    margin-left: -100%;
+}
+
+.step.notviewed{
+    margin-left: 100%;
+}
+
+.screen{
+    /*overflow: hidden;*/
+}
+
+
+.navbar-brand{
+    /*background: url('images/heart-icon.png');*/
+    /*background-repeat: no-repeat;*/
+    background-size: 24px;
+    background-position: 20px;
+    padding-left: 20px;
+}
+
+.navbar-toggle{
+    /*background: url('images/hamburger.png');*/
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+#splash_screen{
+    display: none;
+    color: #fff;
+    font-family: transportheavy !important;
+    font-size: 48px;
+}
+#welcome_screen{
+    display: none;
+    top: -50px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-family: transportheavy !important;
+}
+
+
+h1.step-title {
+    font-size: 48px;
+    margin: 30px 0 60px;
+}
+
+h3.step-description {
+    font-size: 28px;
+    margin: 50px 30px;
+}
+
+.footer {
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    background: #007add;
+    left: 0;
+    bottom: 0;
+    padding: 5px 0;
+}
+
+.footer .like, .footer .dislike{
+    background-size: auto 100%;
+}
+
+.nav-left {
+    background-image: url('images/chevron-left.png');
+    background-repeat:  no-repeat;
+    width: 45px;
+    height: 48px;
+    float: left;
+    background-size: 45px 48px;
+}
+
+.nav-left.inactive{
+    background-image: url('images/chevron-left-inactive.png');
+    display: none;
+}
+.nav-right.inactive {
+       background-image: url('images/chevron-right-inactive.png');
+       display: none;
+}
+.nav-right {
+    background-image: url('images/chevron-right.png');
+    background-repeat: no-repeat;
+    width: 45px;
+    height: 48px;
+    background-size: 45px 48px;
+    float: right;
+}
+
+#welcome_screen li{
+    /*height: 500px;*/
+}
+
+.footer{
+    z-index: 9999;
+}
+
+.start-btn {
+    background: url('images/start.png');
+    height: 40px;
+    width: 100px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin-right: 5%;
+    cursor: pointer;
+}
+
+.tinderslide .img{
+    /* background-size: auto 100% !important; */
+}
+
+.pane {
+    border: 0 !important;
+    
+    padding: 0 !important;
+    /*width: 290px !important;*/
+}
+
+.pane .content{
+    border-radius: 2px;
+    box-shadow: 1px 1px 4px #ccc;
+    margin: 5px;
+}
+
+.question-content {
+    margin: 20px;
+}
+
+.question-learn-more{
+    font-size: 16px;
+    padding: 20px;
+}
+
+
+.help-icon{
+    background: url(images/help.png);
+    cursor: pointer;
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+}
+
+.navbar-header{
+    background: #BDC2CC;
+}
+
+.navbar-header a{
+    color: #fff !important;
+}
+

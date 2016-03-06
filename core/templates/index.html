@@ -1,0 +1,51 @@
+
+{% extends "base.html"%}
+{% block navbar %}
+  
+{% endblock navbar %}
+{% load staticfiles %}
+{% block content %}
+<div id="welcome_screen">
+  <div class="section" id="section1">
+    <div class="slide step" id="slide1">
+      <h1 class="step-title">Hello!</h1>
+      <h3 class="step-description">Welcome to the NHS. <br>Let's make your visit to A&E easier.</h3>
+    </div>
+    <div class="slide" id="slide2">
+      <h1 class="step-title">HealthPass keeps your health information in one place. </h1>
+    </div>
+    <div class="slide" id="slide3">
+      <h1 class="step-title">Your personal information is safe with us.</h1>
+      <h3 class="step-description">Learn more about how we use your information <a href="#">here</a></h3>
+    </div>
+
+<div class="slide" id="slide4">
+      <h1 class="step-title">The NHS is complicated</h1>
+      <h3 class="step-description">HealthPass tells you who can help and what they need to know about you.</h3>
+    </div>
+
+    <div class="slide" id="slide3">
+      <h1 class="step-title start-text">Lets get started</h1>
+
+    </div>
+
+      
+  </div>
+</div>
+
+
+
+<div class="footer actions">
+  <div class="pull-right start-btn"></div>
+  {# <div data-option="like" class="nav-left inactive"></div> #}
+  {# <div  data-option="dislike" class="nav-right"></div> #}
+</div>
+{% endblock content %}
+
+{% block content_js %}
+<script src="{% static 'welcome.js' %}"></script>
+{% endblock content_js %}
+
+{% block content_css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'welcome.css' %}">
+{% endblock content_css %}
