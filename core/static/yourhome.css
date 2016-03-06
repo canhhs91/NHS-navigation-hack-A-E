@@ -1,0 +1,18 @@
+.pane .img{
+    height: 160px;
+}
+
+h1{
+    color: #0064B7;
+}
+
+.question-description {
+    padding: 0 20px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}

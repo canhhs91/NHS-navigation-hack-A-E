@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+from django.shortcuts import redirect
+
 from django.contrib.sessions.backends.db import SessionStore
 from django.shortcuts import render
 from core.models import Question
@@ -109,27 +111,30 @@ def language(request):
     return render(request, 'language.html', {'languages': languages});
 
 def healthpass(request):
-    session_id = request.session.session_key
+    # session_id = request.session.session_key
     #please check if no session saved
-    typeform_url = 'https://api.typeform.com/v0/form/cfeila?key=775e3cdde5d8e7d7c63816b9e0428066cffe31b6&completed=true'
-    import urllib
-    full_data = json.loads(urllib.urlopen(typeform_url).read())['responses']
-    data_id = 0
-    for data in full_data:
-        if data['hidden']['id'] == session_id and int(data['id']) > data_id:
-            data_id = int(data['id'])
-            result = data
+    # typeform_url = 'https://api.typeform.com/v0/form/cfeila?key=775e3cdde5d8e7d7c63816b9e0428066cffe31b6&completed=true'
+    # import urllib
+    # full_data = json.loads(urllib.urlopen(typeform_url).read())['responses']
+    # data_id = 0
+    # for data in full_data:
+    #     if data['hidden']['id'] == session_id and int(data['id']) > data_id:
+    #         data_id = int(data['id'])
+    #         result = data
 
 
     questions = Question.objects.all().values()
-    answers =  json.loads(request.session['nhs_answer'])
-    for question in questions:
-        if('nhs_question_'+str(question['id']) in answers):
-            question['answer'] = answers['nhs_question_'+str(question['id'])]
-        else:
-            question['answer']= 'notgiven'
+    if 'nhs_answer' in request.session:
+        answers =  json.loads(request.session['nhs_answer'])
+        for question in questions:
+            if('nhs_question_'+str(question['id']) in answers):
+                question['answer'] = answers['nhs_question_'+str(question['id'])]
+            else:
+                question['answer']= 'notgiven'
 
-    return render(request, 'healthpass.html', {'questions': questions, 'personal_data': result})
+        return render(request, 'healthpass.html', {'questions': questions, 'personal_data': ''})
+    else:
+        return redirect('question', 1)
 
 def index(request):
     return render(request, 'index.html')
@@ -148,3 +153,8 @@ def submitanswer(request):
     data = request.POST
     request.session['nhs_answer'] = json.dumps(data)
     return HttpResponse(request.session.session_key)
+
+
+def yourhome(request):
+    return render(request, 'yourhome.html')    
+

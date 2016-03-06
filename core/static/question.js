@@ -49,7 +49,7 @@ function is_finish(option){
             'data': data, 
             
         }).done(function(){
-            location.href = '/personal';
+            location.href = '/healthpass';
         })
         return;
     }

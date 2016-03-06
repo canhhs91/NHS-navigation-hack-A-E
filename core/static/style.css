@@ -58,7 +58,7 @@ body{
 }
 #welcome_screen{
     display: none;
-    top: -50px;
+    /*top: -50px;*/
     text-align: center;
     color: #fff;
     font-weight: bold;

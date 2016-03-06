@@ -9,4 +9,5 @@ url(r'^healthpass$', views.healthpass, name='healthpass'),
 url(r'^submitanswer$', views.submitanswer, name='submitanswer'),
 url(r'^question_(\d+).html$', views.question, name='question'),
 url(r'^personal$', views.personal, name='personal'),
+url(r'^yourhome$', views.yourhome, name='yourhome'),
 ]

@@ -1,0 +1,57 @@
+
+{% extends "base.html"%}
+{% load staticfiles %}
+{% load base_tags %}
+{% block content %}
+{% csrf_token %}  
+<br>
+<br>
+<br>
+<br>
+<h1>Welcome
+back</h1>
+    <ul>
+      <li class="pane1 pane">
+      <div class="content">
+        <div class="img"  style="background: url({% static 'images/home.png' %})  no-repeat scroll center center">
+        </div>
+        <div class="question-content">Your A&E Health Pass</div>
+        <div class="question-description">
+          Show your A&E Health Pass to your doctor or at the A&E Department for a faster and simpler experience
+        </div>
+        <div class="pull-right question-learn-more" data-toggle="modal" data-target="#myModal">Learn More</div>
+
+        <div class="clearfix"></div>
+
+      </div>
+
+    </li>
+    <li class="pane1 pane">
+      <div class="content">
+        <div class="img"  style="background: url({% static 'images/home.png' %})  no-repeat scroll center center">
+        </div>
+        <div class="question-content">Your A&E Health Pass</div>
+        <div class="question-description">
+          Show your A&E Health Pass to your doctor or at the A&E Department for a faster and simpler experience
+        </div>
+        <div class="pull-right question-learn-more" data-toggle="modal" data-target="#myModal">Learn More</div>
+
+        <div class="clearfix"></div>
+
+      </div>
+
+    </li>
+    </ul>
+
+{% endblock content %}
+
+{% block content_js %}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+{% endblock content_js %}
+
+
+{% block content_css %}
+  <link href="{% static 'questions.css' %}" rel="stylesheet">
+  <link href="{% static 'yourhome.css' %}" rel="stylesheet">
+  
+{% endblock content_css %}

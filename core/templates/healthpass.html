@@ -4,13 +4,18 @@
 {% load base_tags %}
 {% block content %}
 <div class="block">
-    <h1 class="h1-title">{% if personal_data.answers.list_18439822_choice == 'Male' %}
+    {% comment %}
+        <h1 class="h1-title">{% if personal_data.answers.list_18439822_choice == 'Male' %}
         Mr
         {% elif personal_data.answers.list_18439822_choice == 'Female' %}
         Ms
         {% else %}
         Mr/Ms
-    {% endif %} {{personal_data.answers.textfield_18439783}}, {{personal_data.answers.number_18439800}} yrs</h1> <div class="edit-icon"></div>
+    {% endif %} {{personal_data.answers.textfield_18439783}}, {{personal_data.answers.number_18439800}} yrs</h1> 
+    
+    {% endcomment %}
+    <h1 class="h1-title">Your Healthpass</h1>
+    <div class="edit-icon"></div>
     {% if request.GET.type == 'complete' %}
     <div class="h3-description">Complete Health Pass</div>
     {% for question in questions %}
@@ -25,6 +30,10 @@
     </div>
     {% endif %}
     {% endfor %}
+    <div class="healthpath-dosomething">
+    <a href="/healthpass">BACK</a>
+    </div>
+
 
 
     {% else %}
@@ -47,9 +56,9 @@
 
     </div>
     <div class="safetyzone">
-       {% for question in questions %}
-       {% if question.important and question.answer == 'no' %}
-       <div class="row">
+     {% for question in questions %}
+     {% if question.important and question.answer == 'no' %}
+     <div class="row">
         <div class="summary-item">
             {{question.short_title}}
             <div class="plus-icon"></div>
