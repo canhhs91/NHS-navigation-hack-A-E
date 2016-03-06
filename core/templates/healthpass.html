@@ -4,7 +4,13 @@
 {% load base_tags %}
 {% block content %}
 <div class="block">
-    <h1 class="h1-title">Mr {{personal_data.answers.textfield_18439783}}, {{personal_data.answers.number_18439800}} yrs</h1> <div class="edit-icon"></div>
+    <h1 class="h1-title">{% if personal_data.answers.list_18439822_choice == 'Male' %}
+        Mr
+        {% else %}
+        Ms
+        {% else %}
+        Mr/Ms
+    {% endif %} {{personal_data.answers.textfield_18439783}}, {{personal_data.answers.number_18439800}} yrs</h1> <div class="edit-icon"></div>
     {% if request.GET.type == 'complete' %}
     <div class="h3-description">Complete Health Pass</div>
     {% for question in questions %}
@@ -61,7 +67,6 @@
         {% if questions.20.answer == 'no' %}
         <div class="summary-item" style="background:#FFA83F;">
             No Registered GP
-            <div class="plus-icon"></div>
         </div>
         {% else %}
         <div class="summary-item" style="background:#01B747;">
