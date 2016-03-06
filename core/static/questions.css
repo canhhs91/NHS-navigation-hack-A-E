@@ -28,3 +28,9 @@ body{
     display: block;
     cursor: pointer;
 }
+
+
+
+.container.maincontainer {
+    padding-top: 75px;
+}
