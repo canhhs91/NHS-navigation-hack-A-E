@@ -15,3 +15,8 @@ body{
     cursor: pointer;
     line-height: 40px;
 }
+
+
+.container.maincontainer {
+    padding-top: 75px;
+}
