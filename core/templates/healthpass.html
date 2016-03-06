@@ -30,6 +30,8 @@
         <div class="row">
             <div class="summary-item">
                 {{question.short_title}}
+                <div class="plus-icon"></div>
+                <div class="information">Some Information</div>
             </div>
         </div>
 
@@ -44,6 +46,8 @@
        <div class="row">
         <div class="summary-item">
             {{question.short_title}}
+            <div class="plus-icon"></div>
+            <div class="information">Some Information</div>
         </div>
     </div>
 
@@ -57,10 +61,12 @@
         {% if questions.20.answer == 'no' %}
         <div class="summary-item" style="background:#FFA83F;">
             No Registered GP
+            <div class="plus-icon"></div>
         </div>
         {% else %}
         <div class="summary-item" style="background:#01B747;">
             Registered GP
+            <div class="plus-icon"></div>
         </div>
         {% endif %}
     </div>
@@ -79,7 +85,7 @@
 
 {% block content_js %}
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
-
+<script type="text/javascript" src="{% static 'healthpass.js' %}"></script>
 {% endblock content_js %}
 
 

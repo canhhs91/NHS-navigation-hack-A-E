@@ -52,7 +52,7 @@ body{
 }
 .summary-item{
     color: #fff;
-    height: 73px;
+    /*height: 73px;*/
     line-height: 73px;
     font-size: 24px;
     padding: 0 18px;
@@ -77,4 +77,26 @@ body{
 .block {
     margin: 5px;
     box-shadow: 2px 2px 5px #ccc;
+}
+
+.plus-icon{
+    background: url(images/plus.png);
+    cursor: pointer;
+    width: 27px;height: 27px;display: block;float: right;height: 73px;background-repeat: no-repeat;background-position: 50% 50%;background-size: contain;
+}
+
+.plus-icon.open{
+    background: url(images/minus.png);
+    cursor: pointer;
+    width: 27px;height: 27px;display: block;float: right;height: 73px;background-repeat: no-repeat;background-position: 50% 50%;background-size: contain;
+}
+
+.information {
+    display: none;
+    background: #fff;
+    color: #000;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 -18px;
+    padding: 0 10px;
 }
