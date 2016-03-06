@@ -1,3 +1,8 @@
+
+body{
+    background: #fff;
+    overflow: auto !important;
+}
 .pane .img{
     height: 160px;
 }
@@ -12,7 +17,11 @@ h1{
     font-weight: normal;
 }
 
-ul {
+ul.panes {
     list-style: none;
     padding: 0;
+}
+
+ul.panes li.pane{
+    margin-bottom: 10px;
 }
