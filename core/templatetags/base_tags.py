@@ -30,9 +30,26 @@ class UrlNode(template.Node):
         return url_data.scheme+'://'+url_data.netloc
 
 
+class UrlNode_without_http(template.Node):
+    def __init__(self):
+        pass
+    def render(self, context):
+        request = context['request']
+        ab_uri = request.build_absolute_uri('')
+        url_data = urlparse(ab_uri)
+        return url_data.netloc
+
+
+
 @register.tag
 def base_url(parser, token):
     return UrlNode()
+
+
+@register.tag
+def base_url_without_http(parser, token):
+    return UrlNode_without_http()
+
 
 @register.filter
 def base_ip(path):
