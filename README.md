@@ -1,7 +1,7 @@
 # Healthpass Application
 
 Hi there, 
-This is Healthpass, an application built in 2 days for #nhsnavigationhack, in order to help migrants and refugees understand how to use England's National Health Services.
+This is Healthpass, an mobile-oriented application built in 2 days for #nhsnavigationhack, in order to help migrants and refugees understand how to use England's National Health Services.
 
 It requires python and django to be installed. Dont worry, just need to do copy and paste these lines to your terminal: 
 - sudo apt-get install python2.7 (Linux) 
